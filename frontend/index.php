@@ -24,7 +24,9 @@ require_once 'models/usuarios.modelo.php';
 require_once 'models/carrito.modelo.php';
 require_once 'models/visitas.modelo.php';
 
+require_once 'models/rutas.php';
+
 /* --------------------------------- MODELOS -------------------------------- */
 
-$plantilla = new Plantilla();
+$plantilla = new ControladorPlantilla();
 $plantilla->plantilla();
