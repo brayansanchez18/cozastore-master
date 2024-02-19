@@ -6,24 +6,16 @@
     <div class="top-bar">
       <div class="content-topbar flex-sb-m h-full container">
         <div class="left-top-bar">
-          Free shipping for standard order over $100
+          Envio gratis en compras mayores a $100
         </div>
 
         <div class="right-top-bar flex-w h-full">
           <a href="#" class="flex-c-m trans-04 p-lr-25">
-            Help & FAQs
+            Ingresar
           </a>
 
           <a href="#" class="flex-c-m trans-04 p-lr-25">
-            My Account
-          </a>
-
-          <a href="#" class="flex-c-m trans-04 p-lr-25">
-            EN
-          </a>
-
-          <a href="#" class="flex-c-m trans-04 p-lr-25">
-            USD
+            Registrarse
           </a>
         </div>
       </div>
@@ -41,20 +33,15 @@
         <div class="menu-desktop">
           <ul class="main-menu">
             <li class="active-menu">
-              <a href="index.html">Home</a>
-              <ul class="sub-menu">
-                <li><a href="index.html">Homepage 1</a></li>
-                <li><a href="home-02.html">Homepage 2</a></li>
-                <li><a href="home-03.html">Homepage 3</a></li>
-              </ul>
+              <a href="<?= $frontend ?>">Inicio</a>
             </li>
 
             <li>
-              <a href="product.html">Shop</a>
+              <a href="product.html">Tienda</a>
             </li>
 
             <li class="label1" data-label1="hot">
-              <a href="shoping-cart.html">Features</a>
+              <a href="shoping-cart.html">Ofertas</a>
             </li>
 
             <li>
@@ -62,11 +49,11 @@
             </li>
 
             <li>
-              <a href="about.html">About</a>
+              <a href="about.html">Nosotros</a>
             </li>
 
             <li>
-              <a href="contact.html">Contact</a>
+              <a href="contact.html">Contacto</a>
             </li>
           </ul>
         </div>
@@ -196,7 +183,7 @@
         <button class="flex-c-m trans-04">
           <i class="zmdi zmdi-search"></i>
         </button>
-        <input class="plh3" type="text" name="search" placeholder="Search...">
+        <input class="plh3" type="text" name="search" placeholder="Buscar...">
       </form>
     </div>
   </div>

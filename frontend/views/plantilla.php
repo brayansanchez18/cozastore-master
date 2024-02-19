@@ -1,5 +1,7 @@
 <?php $frontend = Ruta::ctrRuta();
-$backend = Ruta::ctrRutaServidor(); ?>
+$backend = Ruta::ctrRutaServidor();
+$comercio = ControladorPlantilla::ctrMostrarDivisa();
+$divisa = $comercio['divisa']; ?>
 <?php
 
 /* -------------------------------------------------------------------------- */
@@ -289,6 +291,7 @@ if (!is_array($cabeceras)) {
 	</script>
 	<!--===============================================================================================-->
 	<script src="<?= $frontend ?>views/js/main.js"></script>
+	<script src="<?= $frontend ?>views/js/plantilla.js"></script>
 
 </body>
 
