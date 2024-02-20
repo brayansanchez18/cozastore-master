@@ -10,3 +10,20 @@ if (pagActiva != null) {
 }
 
 /* ------------------------------ MIGAS DE PAN ------------------------------ */
+
+/* -------------------------------------------------------------------------- */
+/*                             ENLACES PAGINACION                             */
+/* -------------------------------------------------------------------------- */
+
+let url = window.location.href;
+let indice = url.split("/");
+let pagActual = indice[7];
+console.log(indice);
+
+if (isNaN(pagActual)) {
+  $("#item1").addClass("active");
+} else {
+  $("#item" + pagActual).addClass("active");
+}
+
+/* --------------------------- ENLACES PAGINACION --------------------------- */

@@ -1,30 +1,14 @@
-<!-- Product -->
 <?php
-$titulosModulos = array("LO MÁS VENDIDO");
-$rutaModulos = array("lo-mas-vendido");
-
-$base = 0;
-$tope = 16;
-
-$ordenar = "ventas";
+$ordenar = 'vistas';
 $item = 'estado';
 $valor = 1;
-$modo = ",Rand()";
-$ventas = ControladorProductos::ctrMostrarProductos($ordenar, $item, $valor, $base, $tope, $modo);
-$id_ategorias = [];
-
-$item = null;
-$valor = null;
-$categorias = ControladorProductos::ctrMostrarCategorias($item, $valor);
-?>
-<section class="bg0 p-t-23 p-b-140">
+$modo = ',Rand()';
+$base = 0;
+$tope = 16;
+$vistas = ControladorProductos::ctrMostrarProductos($ordenar, $item, $valor, $base, $tope, $modo); ?>
+<!-- Product -->
+<div class="bg0 m-t-23 p-b-140" style="margin-top: 80px;">
   <div class="container">
-    <div class="p-b-10">
-      <h3 class="ltext-103 cl5">
-        PRODUCTOS MAS VENDIDOS
-      </h3>
-    </div>
-
     <div class="flex-w flex-sb-m p-b-52">
       <div class="flex-w flex-l-m filter-tope-group m-tb-10">
       </div>
@@ -47,6 +31,13 @@ $categorias = ControladorProductos::ctrMostrarCategorias($item, $valor);
           <input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
         </div>
       </div>
+
+      <?php
+      $item = null;
+      $valor = null;
+
+      $categorias = ControladorProductos::ctrMostrarCategorias($item, $valor);
+      ?>
 
       <!-- Filter -->
       <div class="dis-none panel-filter w-full p-t-10">
@@ -81,7 +72,7 @@ $categorias = ControladorProductos::ctrMostrarCategorias($item, $valor);
     </div>
 
     <div class="row isotope-grid">
-      <?php foreach ($ventas as $key => $value) : ?>
+      <?php foreach ($vistas as $key => $value) : ?>
         <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item value-<?= $value['id_categoria'] ?>">
           <!-- Block2 -->
           <div class="block2">
@@ -124,4 +115,4 @@ $categorias = ControladorProductos::ctrMostrarCategorias($item, $valor);
       <?php endforeach ?>
     </div>
   </div>
-</section>
+</div>

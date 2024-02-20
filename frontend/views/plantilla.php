@@ -100,6 +100,7 @@ if (!is_array($cabeceras)) {
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= $frontend ?>views/css/util.css">
 	<link rel="stylesheet" type="text/css" href="<?= $frontend ?>views/css/main.css">
+	<link rel="stylesheet" href="<?= $frontend ?>views/css/plantilla.css">
 	<!--===============================================================================================-->
 </head>
 
@@ -166,7 +167,7 @@ if (!is_array($cabeceras)) {
 		} else if ($infoProductos != null) {
 
 			include_once 'modules/infoproducto.php';
-		} else if ($rutas[0] == 'buscador' || $rutas[0] == 'verificar' || $rutas[0] == 'salir' || $rutas[0] == 'perfil' || $rutas[0] == 'carrito-de-compras' || $rutas[0] == 'error' || $rutas[0] == 'finalizar-compra' || $rutas[0] == 'ofertas' || $rutas[0] == 'cancelado') {
+		} else if ($rutas[0] == 'buscador' || $rutas[0] == 'verificar' || $rutas[0] == 'salir' || $rutas[0] == 'perfil' || $rutas[0] == 'carrito-de-compras' || $rutas[0] == 'error' || $rutas[0] == 'finalizar-compra' || $rutas[0] == 'ofertas' || $rutas[0] == 'cancelado' || $rutas[0] == 'tienda') {
 
 			include 'modules/' . $rutas[0] . '.php';
 		} else if ($rutas[0] == 'inicio') {

@@ -37,7 +37,7 @@
             </li>
 
             <li>
-              <a href="product.html">Tienda</a>
+              <a href="<?= $frontend ?>tienda">Tienda</a>
             </li>
 
             <li class="label1" data-label1="hot">
