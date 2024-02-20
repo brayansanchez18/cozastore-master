@@ -25,7 +25,7 @@
       <nav class="limiter-menu-desktop container">
 
         <!-- Logo desktop -->
-        <a href="#" class="logo">
+        <a href="<?= $frontend ?>" class="logo">
           <img src="<?= $backend ?>views/images/icons/logo-01.png" alt="IMG-LOGO">
         </a>
 
