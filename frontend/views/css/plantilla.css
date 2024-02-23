@@ -63,3 +63,11 @@
     background-color: #000000;
     color: #fff;
   }
+
+  .linkBuscador {
+    color: #404040;
+  }
+
+  .linkBuscador:hover {
+    color: #6c7ae0;
+  }

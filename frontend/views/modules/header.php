@@ -179,12 +179,14 @@
         <img src="<?= $backend ?>views/images/icons/icon-close2.png" alt="CLOSE">
       </button>
 
-      <form class="wrap-search-header flex-w p-l-15">
+      <div class="wrap-search-header flex-w p-l-15" id="buscador">
         <button class="flex-c-m trans-04">
-          <i class="zmdi zmdi-search"></i>
+          <a href="<?= $frontend ?>buscador/1" class="linkBuscador">
+            <i class="zmdi zmdi-search"></i>
+          </a>
         </button>
-        <input class="plh3" type="text" name="search" placeholder="Buscar...">
-      </form>
+        <input id="search-input" placeholder="Buscar...">
+        </form>
+      </div>
     </div>
-  </div>
 </header>

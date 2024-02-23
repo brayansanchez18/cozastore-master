@@ -293,6 +293,7 @@ if (!is_array($cabeceras)) {
 	<!--===============================================================================================-->
 	<script src="<?= $frontend ?>views/js/main.js"></script>
 	<script src="<?= $frontend ?>views/js/plantilla.js"></script>
+	<script src="<?= $frontend ?>views/js/buscador.js"></script>
 
 </body>
 

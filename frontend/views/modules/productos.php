@@ -144,45 +144,47 @@
     <?php else : ?>
       <div class="row isotope-grid">
         <?php foreach ($productos as $key => $value) : ?>
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item value-<?= $value['id_categoria'] ?>">
-            <!-- Block2 -->
-            <div class="block2">
-              <div class="block2-pic hov-img0">
-                <img src="<?= $backend . $value['portada'] ?>" alt="<?= $value['titulo'] ?>">
+          <?php if ($value['estado'] != 0) : ?>
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item value-<?= $value['id_categoria'] ?>">
+              <!-- Block2 -->
+              <div class="block2">
+                <div class="block2-pic hov-img0">
+                  <img src="<?= $backend . $value['portada'] ?>" alt="<?= $value['titulo'] ?>">
 
-                <a href="<?= $frontend . $value['ruta'] ?>" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
-                  Ver Producto
-                </a>
-              </div>
-
-              <div class="block2-txt flex-w flex-t p-t-14">
-                <div class="block2-txt-child1 flex-col-l ">
-                  <a href="<?= $frontend . $value['ruta'] ?>" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                    <?= $value['titulo'] ?>
+                  <a href="<?= $frontend . $value['ruta'] ?>" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
+                    Ver Producto
                   </a>
-
-                  <span class="stext-105 cl3">
-                    <?php if ($value['precio'] != 0) : ?>
-                      <?php if ($value['oferta'] == 0) : ?>
-                        $<?= number_format($value['precio'], 2) ?> <?= $divisa ?>
-                      <?php else : ?>
-                        $<?= number_format($value['precioOferta'], 2) ?> <?= $divisa ?>
-                      <?php endif ?>
-                    <?php else : ?>
-                      GRATIS
-                    <?php endif ?>
-                  </span>
                 </div>
 
-                <div class="block2-txt-child2 flex-r p-t-3">
-                  <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                    <img class="icon-heart1 dis-block trans-04" src="<?= $backend ?>views/images/icons/icon-heart-01.png" alt="ICON">
-                    <img class="icon-heart2 dis-block trans-04 ab-t-l" src="<?= $backend ?>views/images/icons/icon-heart-02.png" alt="ICON">
-                  </a>
+                <div class="block2-txt flex-w flex-t p-t-14">
+                  <div class="block2-txt-child1 flex-col-l ">
+                    <a href="<?= $frontend . $value['ruta'] ?>" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                      <?= $value['titulo'] ?>
+                    </a>
+
+                    <span class="stext-105 cl3">
+                      <?php if ($value['precio'] != 0) : ?>
+                        <?php if ($value['oferta'] == 0) : ?>
+                          $<?= number_format($value['precio'], 2) ?> <?= $divisa ?>
+                        <?php else : ?>
+                          $<?= number_format($value['precioOferta'], 2) ?> <?= $divisa ?>
+                        <?php endif ?>
+                      <?php else : ?>
+                        GRATIS
+                      <?php endif ?>
+                    </span>
+                  </div>
+
+                  <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                      <img class="icon-heart1 dis-block trans-04" src="<?= $backend ?>views/images/icons/icon-heart-01.png" alt="ICON">
+                      <img class="icon-heart2 dis-block trans-04 ab-t-l" src="<?= $backend ?>views/images/icons/icon-heart-02.png" alt="ICON">
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          <?php endif ?>
         <?php endforeach ?>
       </div>
 
@@ -277,7 +279,6 @@
               <!-- ---------- LOS BOTONES DE LAS ÚLTIMAS 4 PÁGINAS Y LA PRIMERA PÁG --------- -->
 
             <?php endif ?>
-
           <?php else : ?>
             <ul class="pagination modal-3">
               <?php for ($i = 1; $i <= $pagProductos; $i++) : ?>
