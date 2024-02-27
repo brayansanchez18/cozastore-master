@@ -1,3 +1,70 @@
+<?php
+/* -------------------------------------------------------------------------- */
+/*                          INICIO DE SESION USUARIO                          */
+/* -------------------------------------------------------------------------- */
+
+// if (isset($_SESSION['validarSesion'])) {
+//   if ($_SESSION['validarSesion'] == 'ok') {
+//     echo '<script>
+// 				localStorage.setItem("usuario","' . $_SESSION["id"] . '");
+// 			</script>';
+//   }
+// }
+
+/* ------------------------ INICIO DE SESION USUARIO ------------------------ */
+
+/* -------------------------------------------------------------------------- */
+/*                      CREAR EL OBJETO DE LA API GOOGLE                      */
+/* -------------------------------------------------------------------------- */
+
+// $cliente = new Google\Client();
+// $cliente->setAuthConfig('modelos/client_secret.json');
+// $cliente->setAccessType("offline");
+// $cliente->setScopes(['profile', 'email']);
+
+/* -------------------- CREAR EL OBJETO DE LA API GOOGLE -------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                        RUTA PARA EL LOGIN DE GOOGLE                        */
+/* -------------------------------------------------------------------------- */
+
+// $rutaGoogle = $cliente->createAuthUrl();
+
+/* ---------------------- RUTA PARA EL LOGIN DE GOOGLE ---------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*              RECIBIMOS LA VARIABLE GET DE GOOGLE LLAMADA CODE              */
+/* -------------------------------------------------------------------------- */
+
+// if (isset($_GET['code'])) {
+//   $token = $cliente->authenticate($_GET['code']);
+//   $_SESSION['id_token_google'] = $token;
+//   $cliente->setAccessToken($token);
+// }
+
+/* ------------ RECIBIMOS LA VARIABLE GET DE GOOGLE LLAMADA CODE ------------ */
+
+/* -------------------------------------------------------------------------- */
+/*             RECIBIMOS LOS DATOS CIFRADOS DE GOOGLE EN UN ARRAY             */
+/* -------------------------------------------------------------------------- */
+
+// if ($cliente->getAccessToken()) {
+//   $item = $cliente->verifyIdToken();
+//   $datos = [
+//     'nombre' => $item['name'],
+//     'email' => $item['email'],
+//     'foto' => $item['picture'],
+//     'password' => 'null',
+//     'modo' => 'google',
+//     'verificacion' => 0,
+//     'emailEncriptado' => 'null'
+//   ];
+
+// $respuesta = ControladorUsuario::ctrRegistroRedesSociales($datos);
+// }
+
+/* ----------- RECIBIMOS LOS DATOS CIFRADOS DE GOOGLE EN UN ARRAY ----------- */
+?>
 <!-- Header -->
 <header>
   <!-- Header desktop -->

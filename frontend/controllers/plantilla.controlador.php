@@ -49,7 +49,7 @@ class ControladorPlantilla
   /*                       MOSTRAR INFORMACION DEL FOOTER                       */
   /* -------------------------------------------------------------------------- */
 
-  static public function ctrMostrarFotter()
+  static public function ctrMostrarFooter()
   {
     $tabla = 'footer';
     $respuesta = ModeloPlantilla::mdlMostrarFotter($tabla);

@@ -28,5 +28,14 @@ require_once 'models/rutas.php';
 
 /* --------------------------------- MODELOS -------------------------------- */
 
+/* -------------------------------------------------------------------------- */
+/*                                  EXTENSION                                 */
+/* -------------------------------------------------------------------------- */
+
+require_once 'extenciones/phpmailer/vendor/autoload.php';
+require_once 'extenciones/google/vendor/autoload.php';
+
+/* -------------------------------- EXTENSION ------------------------------- */
+
 $plantilla = new ControladorPlantilla();
 $plantilla->plantilla();

@@ -1,3 +1,5 @@
+var rutaOculta = $("#rutaOculta").val();
+
 /* -------------------------------------------------------------------------- */
 /*                                MIGAS DE PAN                                */
 /* -------------------------------------------------------------------------- */
@@ -18,7 +20,6 @@ if (pagActiva != null) {
 let url = window.location.href;
 let indice = url.split("/");
 let pagActual = indice[7];
-console.log(indice);
 
 if (isNaN(pagActual)) {
   $("#item1").addClass("active");

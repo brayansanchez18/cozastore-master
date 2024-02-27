@@ -1,4 +1,5 @@
-<?php $frontend = Ruta::ctrRuta();
+<?php session_start();
+$frontend = Ruta::ctrRuta();
 $backend = Ruta::ctrRutaServidor();
 $comercio = ControladorPlantilla::ctrMostrarDivisa();
 $divisa = $comercio['divisa']; ?>
@@ -102,6 +103,7 @@ if (!is_array($cabeceras)) {
 	<link rel="stylesheet" type="text/css" href="<?= $frontend ?>views/css/main.css">
 	<link rel="stylesheet" href="<?= $frontend ?>views/css/plantilla.css">
 	<!--===============================================================================================-->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="animsition">
@@ -294,7 +296,7 @@ if (!is_array($cabeceras)) {
 	<script src="<?= $frontend ?>views/js/main.js"></script>
 	<script src="<?= $frontend ?>views/js/plantilla.js"></script>
 	<script src="<?= $frontend ?>views/js/buscador.js"></script>
-
+	<script src="<?= $frontend ?>views/js/usuarios.js"></script>
 </body>
 
 </html>
