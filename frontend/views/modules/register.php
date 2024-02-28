@@ -5,11 +5,12 @@
         <div class="card shadow-2-strong" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
             <form method="post" onsubmit="return registroUsuario()">
+              <!-- <form method="post"> -->
               <h3 class="mb-5">Registrarse</h3>
 
               <div class="form-outline mb-4">
-                <input type="text" id="typeEmailX-2 regUsuario" name="regUsuario" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX-2">Nombre Completo</label>
+                <input type="text" id="regUsuario" name="regUsuario" class="form-control form-control-lg inputNombre" required />
+                <label class="form-label" for="regUsuario">Nombre Completo</label>
               </div>
 
               <!-- <div class="form-outline mb-4">
@@ -18,19 +19,20 @@
             </div> -->
 
               <div class="form-outline mb-4">
-                <input type="email" id="typeEmailX-2 regEmail" name="regEmail" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX-2">Correo Electronico</label>
+                <input type="email" id="regEmail" name="regEmail" class="form-control form-control-lg inputCorreo" required />
+                <label class="form-label" for="regEmail">Correo Electronico</label>
               </div>
 
               <div class="form-outline mb-4">
-                <input type="password" id="typePasswordX-2 regPassword" name="regPassword" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX-2">Contraseña</label>
+                <input type="password" id="regPassword" name="regPassword" class="form-control form-control-lg inputPassword" required />
+                <label class="form-label" for="regPassword">Contraseña</label>
               </div>
 
-              <div class="form-outline mb-4">
-                <input type="password" id="typePasswordX-2 validarPassword" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX-2">Validar Contraseña</label>
-              </div>
+              <!-- TODO: realizar validacion de Contraseña -->
+              <!-- <div class="form-outline mb-4">
+                <input type="password" id="validarPassword" class="form-control form-control-lg validarPassword" required />
+                <label class="form-label" for="validarPassword">Validar Contraseña</label>
+              </div> -->
 
               <?php
               $footer = ControladorPlantilla::ctrMostrarFooter();

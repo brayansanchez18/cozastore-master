@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-02-2024 a las 23:29:36
+-- Tiempo de generación: 28-02-2024 a las 17:45:11
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1096,19 +1096,7 @@ INSERT INTO `usuarios` (`id`, `nombre`, `password`, `email`, `modo`, `foto`, `ve
 (8, 'Brayan Sánchez', 'null', 'brayanraperoelguapo@gmail.com', 'facebook', 'http://graph.facebook.com/1117721791981818/picture?type=large', 0, 'null', '2021-01-27 01:53:50'),
 (9, 'Brayan Emanuel Sánchez Ramírez', 'null', 'brayan.sanchez.contacto@gmail.com', 'google', 'https://lh3.googleusercontent.com/-iqAhij8KTlc/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckCCNrQ_B333jNy-Faa4kXICs5Qzg/s96-c/photo.jpg', 0, 'null', '2021-02-05 18:46:31'),
 (10, 'jose maria', '$2a$07$asxx54ahjppf45sd87a5auInILSqCot0Wdt7R2Clv.qrGLj6yvjYy', 'jose@jose.com', 'directo', '', 1, '9eceec798d6d77c03c3b2246c7bc9941', '2021-02-07 22:51:36'),
-(13, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:22:08'),
-(14, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:30:27'),
-(15, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5auXoFoWYD1s0btDCLv2DL3G7qjHblAb9G', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:42:27'),
-(16, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5auXoFoWYD1s0btDCLv2DL3G7qjHblAb9G', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:42:39'),
-(17, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5auXoFoWYD1s0btDCLv2DL3G7qjHblAb9G', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:44:35'),
-(18, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:48:32'),
-(19, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:49:35'),
-(20, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:51:46'),
-(21, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:52:28'),
-(22, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:54:14'),
-(23, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 18:54:24'),
-(24, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 20:50:55'),
-(25, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au3fcwd0t.Tj3ZTCuyJI1xak7o3N0/qwC', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-26 22:06:13');
+(31, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-28 16:32:19');
 
 -- --------------------------------------------------------
 
@@ -1417,7 +1405,7 @@ ALTER TABLE `subcategorias`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `visitaspaises`

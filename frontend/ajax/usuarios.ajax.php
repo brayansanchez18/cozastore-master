@@ -1,6 +1,6 @@
 <?php
-require_once '../controladores/usuarios.controlador.php';
-require_once '../modelos/usuarios.modelo.php';
+require_once '../controllers/usuarios.controlador.php';
+require_once '../models/usuarios.modelo.php';
 
 class AjaxUsuarios
 {
