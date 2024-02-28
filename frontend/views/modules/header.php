@@ -3,13 +3,13 @@
 /*                          INICIO DE SESION USUARIO                          */
 /* -------------------------------------------------------------------------- */
 
-// if (isset($_SESSION['validarSesion'])) {
-//   if ($_SESSION['validarSesion'] == 'ok') {
-//     echo '<script>
-// 				localStorage.setItem("usuario","' . $_SESSION["id"] . '");
-// 			</script>';
-//   }
-// }
+if (isset($_SESSION['validarSesion'])) {
+  if ($_SESSION['validarSesion'] == 'ok') {
+    echo '<script>
+				localStorage.setItem("usuario","' . $_SESSION["id"] . '");
+			</script>';
+  }
+}
 
 /* ------------------------ INICIO DE SESION USUARIO ------------------------ */
 
@@ -77,13 +77,27 @@
         </div>
 
         <div class="right-top-bar flex-w h-full">
-          <a href="<?= $frontend ?>login" class="flex-c-m trans-04 p-lr-25">
-            Ingresar
-          </a>
+          <?php if (isset($_SESSION['validarSesion'])) : ?>
+            <?php if ($_SESSION['validarSesion'] == 'ok') : ?>
+              <?php if ($_SESSION['modo'] == 'directo') : ?>
+                <a href="<?= $frontend ?>perfil" class="flex-c-m trans-04 p-lr-25 text-capitalize">
+                  <?= $_SESSION['nombre'] ?>
+                </a>
 
-          <a href="<?= $frontend ?>register" class="flex-c-m trans-04 p-lr-25">
-            Registrarse
-          </a>
+                <a href="<?= $frontend ?>salir" class="flex-c-m trans-04 p-lr-25">
+                  Salir
+                </a>
+              <?php endif ?>
+            <?php endif ?>
+          <?php else : ?>
+            <a href="<?= $frontend ?>login" class="flex-c-m trans-04 p-lr-25">
+              Ingresar
+            </a>
+
+            <a href="<?= $frontend ?>register" class="flex-c-m trans-04 p-lr-25">
+              Registrarse
+            </a>
+          <?php endif ?>
         </div>
       </div>
     </div>

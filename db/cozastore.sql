@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-02-2024 a las 17:45:11
+-- Tiempo de generación: 28-02-2024 a las 22:06:18
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1096,7 +1096,7 @@ INSERT INTO `usuarios` (`id`, `nombre`, `password`, `email`, `modo`, `foto`, `ve
 (8, 'Brayan Sánchez', 'null', 'brayanraperoelguapo@gmail.com', 'facebook', 'http://graph.facebook.com/1117721791981818/picture?type=large', 0, 'null', '2021-01-27 01:53:50'),
 (9, 'Brayan Emanuel Sánchez Ramírez', 'null', 'brayan.sanchez.contacto@gmail.com', 'google', 'https://lh3.googleusercontent.com/-iqAhij8KTlc/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckCCNrQ_B333jNy-Faa4kXICs5Qzg/s96-c/photo.jpg', 0, 'null', '2021-02-05 18:46:31'),
 (10, 'jose maria', '$2a$07$asxx54ahjppf45sd87a5auInILSqCot0Wdt7R2Clv.qrGLj6yvjYy', 'jose@jose.com', 'directo', '', 1, '9eceec798d6d77c03c3b2246c7bc9941', '2021-02-07 22:51:36'),
-(31, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 1, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-28 16:32:19');
+(31, 'brayan emanuel sanchez ramirez', '$2a$07$asxx54ahjppf45sd87a5au9qVvwX8gFJUBxfGfDrhdF9F0ilMkf..', 'brayan.sanchez.ramirez@gmail.com', 'directo', '', 0, '19af503f3b20814c66fc57c1b95f4cb8', '2024-02-28 20:16:45');
 
 -- --------------------------------------------------------
 

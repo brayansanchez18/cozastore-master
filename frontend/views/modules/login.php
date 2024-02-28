@@ -4,20 +4,25 @@
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="card shadow-2-strong" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
+            <form method="post">
+              <h3 class="mb-5">Ingresar</h3>
 
-            <h3 class="mb-5">Ingresar</h3>
+              <div class="form-outline mb-4">
+                <input type="email" id="ingEmail" name="ingEmail" class="form-control form-control-lg ingEmail" required />
+                <label class="form-label" for="typeEmailX-2">Correo Electronico</label>
+              </div>
 
-            <div class="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typeEmailX-2">Correo Electronico</label>
-            </div>
+              <div class="form-outline mb-4">
+                <input type="password" id="ingPassword" name="ingPassword" class="form-control form-control-lg ingPassword" required />
+                <label class="form-label" for="typePasswordX-2">Contraseña</label>
+              </div>
 
-            <div class="form-outline mb-4">
-              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typePasswordX-2">Contraseña</label>
-            </div>
-
-            <button class="btn btn-lg btn-block" type="submit" style="background-color: #6c7ae0; color:#fff;">Ingresar</button>
+              <?php
+              $ingreso = new ControladorUsuario();
+              $ingreso->ctrIngresoUsuario();
+              ?>
+              <button class="btn btn-lg btn-block" type="submit" style="background-color: #6c7ae0; color:#fff;">Ingresar</button>
+            </form>
 
             <hr class="my-4">
 

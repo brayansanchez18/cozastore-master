@@ -171,15 +171,12 @@ class ControladorUsuario
   /*                               INGRESO USUARIO                              */
   /* -------------------------------------------------------------------------- */
 
-  public function ctrIngresoUsuario()
+  static public function ctrIngresoUsuario()
   {
 
     if (isset($_POST['ingEmail'])) {
 
-      if (
-        preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST['ingEmail']) &&
-        preg_match('/^[a-zA-Z0-9]+$/', $_POST['ingPassword'])
-      ) {
+      if (preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST['ingEmail']) && preg_match('/^[a-zA-Z0-9]+$/', $_POST['ingPassword'])) {
 
         $encriptar = crypt($_POST['ingPassword'], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
         $tabla = 'usuarios';
@@ -187,11 +184,12 @@ class ControladorUsuario
         $valor = $_POST['ingEmail'];
         $respuesta = ModeloUsuario::mdlMostrarUsuario($tabla, $item, $valor);
 
-        if ($respuesta['email'] == $_POST['ingEmail'] && $respuesta['password'] == $encriptar) {
+        if (is_array($respuesta) && $respuesta['email'] == $_POST['ingEmail'] && $respuesta['password'] == $encriptar) {
 
           if ($respuesta['verificacion'] == 1) {
 
             echo '<script>
+
               Swal.fire({
                   title: "¡NO HA VERIFICADO SU CORREO ELECTRÓNICO!",
                   text: "Por favor revise la bandeja de entrada o la carpeta de SPAM de su correo para verififcar la dirección de correo electrónico ' . $respuesta["email"] . '",
@@ -204,6 +202,7 @@ class ControladorUsuario
                     history.back();
                   }
                 });
+
               </script>';
           } else {
             $url = Ruta::ctrRuta();
@@ -216,16 +215,17 @@ class ControladorUsuario
             $_SESSION['modo'] = $respuesta['modo'];
 
             // echo '<script>
-            // 	window.location = localStorage.getItem("rutaActual");
+            //   window.location = localStorage.getItem("rutaActual");
             // </script>';
 
             echo '<script>
-							window.location = ' . $url . ';
-						</script>';
+              window.location.href = "' . $url . '"
+            </script>';
           }
         } else {
-          $url = Ruta::ctrRuta();
+
           echo '<script>
+
           Swal.fire({
               title: "¡ERROR AL INGRESAR!",
               text: "Por favor revise que el email exista o que la contraseña coincida con la que uso al momento de registrarse",
@@ -235,14 +235,16 @@ class ControladorUsuario
             })
             .then((isConfirm) => {
               if (isConfirm) {
-                window.location = ' . $url . 'login;
+                  history.back();
               }
             });
+
           </script>';
         }
       } else {
-        $url = Ruta::ctrRuta();
+
         echo '<script>
+
           Swal.fire({
               title: "¡ERROR!",
               text: "Error al ingresar al sistema, no se permiten caracteres especiales",
@@ -252,9 +254,10 @@ class ControladorUsuario
             })
             .then((isConfirm) => {
               if (isConfirm) {
-                window.location = ' . $url . 'login;
+                  history.back();
               }
             });
+
           </script>';
       }
     }
