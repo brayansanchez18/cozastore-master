@@ -30,8 +30,8 @@
             <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" type="submit">Registrarse con <i class="fa fa-facebook me-2"></i></button>
 
             <hr>
-            Ya tienes una cuenta? <a href="<?= $frontend ?>register">Ingresa aqui</a><br>
-            <a href="<?= $frontend ?>">Recuperar Contraseña</a>
+            Aun no tienes una cuenta? <a href="<?= $frontend ?>register">Registrate</a><br>
+            <a href="<?= $frontend ?>recuperar-password" target="_blank">Recuperar Contraseña</a>
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ class ControladorUsuario
         $tabla = 'usuarios';
         $respuesta = ModeloUsuario::mdlRegistroUsuario($tabla, $datos);
 
-        var_dump($respuesta);
+        // var_dump($respuesta);
 
         if ($respuesta == 'ok') {
 
@@ -359,7 +359,7 @@ class ControladorUsuario
                   })
                   .then((isConfirm) => {
                     if (isConfirm) {
-                        history.back();
+                        window.location.href = "' . $url . '"recuperar-password
                     }
                   });
 
@@ -377,7 +377,7 @@ class ControladorUsuario
                   })
                   .then((isConfirm) => {
                     if (isConfirm) {
-                        window.location.href = "' . $url . '"
+                        window.location.href = "' . $url . '"login
                     }
                   });
 

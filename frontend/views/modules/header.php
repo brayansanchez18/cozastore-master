@@ -122,19 +122,19 @@ if (isset($_SESSION['validarSesion'])) {
             </li>
 
             <li class="label1" data-label1="hot">
-              <a href="shoping-cart.html">Ofertas</a>
+              <a href="<?= $frontend ?>ofertas">Ofertas</a>
             </li>
 
             <li>
-              <a href="blog.html">Blog</a>
+              <a href="<?= $frontend ?>blog-inicio">Blog</a>
             </li>
 
             <li>
-              <a href="about.html">Nosotros</a>
+              <a href="<?= $frontend ?>nosotros">Nosotros</a>
             </li>
 
             <li>
-              <a href="contact.html">Contacto</a>
+              <a href="<?= $frontend ?>contacto">Contacto</a>
             </li>
           </ul>
         </div>
@@ -193,62 +193,60 @@ if (isset($_SESSION['validarSesion'])) {
     <ul class="topbar-mobile">
       <li>
         <div class="left-top-bar">
-          Free shipping for standard order over $100
+          <!-- Free shipping for standard order over $100 -->
         </div>
       </li>
 
       <li>
         <div class="right-top-bar flex-w h-full">
-          <a href="#" class="flex-c-m p-lr-10 trans-04">
-            Help & FAQs
-          </a>
+          <?php if (isset($_SESSION['validarSesion'])) : ?>
+            <?php if ($_SESSION['validarSesion'] == 'ok') : ?>
+              <?php if ($_SESSION['modo'] == 'directo') : ?>
+                <a href="<?= $frontend ?>perfil" class="flex-c-m trans-04 p-lr-10 text-capitalize">
+                  <?= $_SESSION['nombre'] ?>
+                </a>
 
-          <a href="#" class="flex-c-m p-lr-10 trans-04">
-            My Account
-          </a>
+                <a href="<?= $frontend ?>salir" class="flex-c-m trans-04 p-lr-10">
+                  Salir
+                </a>
+              <?php endif ?>
+            <?php endif ?>
+          <?php else : ?>
+            <a href="<?= $frontend ?>login" class="flex-c-m trans-04 p-lr-10">
+              Ingresar
+            </a>
 
-          <a href="#" class="flex-c-m p-lr-10 trans-04">
-            EN
-          </a>
-
-          <a href="#" class="flex-c-m p-lr-10 trans-04">
-            USD
-          </a>
+            <a href="<?= $frontend ?>register" class="flex-c-m trans-04 p-lr-10">
+              Registrarse
+            </a>
+          <?php endif ?>
         </div>
       </li>
     </ul>
 
     <ul class="main-menu-m">
       <li>
-        <a href="index.html">Home</a>
-        <ul class="sub-menu-m">
-          <li><a href="index.html">Homepage 1</a></li>
-          <li><a href="home-02.html">Homepage 2</a></li>
-          <li><a href="home-03.html">Homepage 3</a></li>
-        </ul>
-        <span class="arrow-main-menu-m">
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </span>
+        <a href="<?= $frontend ?>">Inicio</a>
       </li>
 
       <li>
-        <a href="product.html">Shop</a>
+        <a href="<?= $frontend ?>tienda">Tienda</a>
       </li>
 
       <li>
-        <a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
+        <a href="<?= $frontend ?>ofertas" class="label1 rs1" data-label1="hot">Ofertas</a>
       </li>
 
       <li>
-        <a href="blog.html">Blog</a>
+        <a href="<?= $frontend ?>blog-inicio">Blog</a>
       </li>
 
       <li>
-        <a href="about.html">About</a>
+        <a href="<?= $frontend ?>nosotros">Nosotros</a>
       </li>
 
       <li>
-        <a href="contact.html">Contact</a>
+        <a href="<?= $frontend ?>contacto">Contacto</a>
       </li>
     </ul>
   </div>
