@@ -46,6 +46,19 @@ class ControladorPlantilla
   /* --------------------- TRAER DIVISA DE MANERA DINAMICA -------------------- */
 
   /* -------------------------------------------------------------------------- */
+  /*                     MOSTRAMOS INFORMACION PARA CONTACTO                    */
+  /* -------------------------------------------------------------------------- */
+
+  static public function ctrMostrarContacto()
+  {
+    $tabla = 'footer';
+    $respuesta = ModeloPlantilla::mdlMostrarContacto($tabla);
+    return $respuesta;
+  }
+
+  /* --------------- End of MOSTRAMOS INFORMACION PARA CONTACTO --------------- */
+
+  /* -------------------------------------------------------------------------- */
   /*                       MOSTRAR INFORMACION DEL FOOTER                       */
   /* -------------------------------------------------------------------------- */
 

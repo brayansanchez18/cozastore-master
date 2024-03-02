@@ -31,7 +31,7 @@
 
             <hr>
             Aun no tienes una cuenta? <a href="<?= $frontend ?>register">Registrate</a><br>
-            <a href="<?= $frontend ?>recuperar-password" target="_blank">Recuperar Contraseña</a>
+            <a href="<?= $frontend ?>recuperar-password">Recuperar Contraseña</a>
           </div>
         </div>
       </div>

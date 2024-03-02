@@ -40,6 +40,20 @@ class ModeloPlantilla
   /* --------------------- TRAER DIVISA DE MANERA DINAMICA -------------------- */
 
   /* -------------------------------------------------------------------------- */
+  /*                     MOSTRAMOS INFORMACION PARA CONTACTO                    */
+  /* -------------------------------------------------------------------------- */
+
+  static public function mdlMostrarContacto($tabla)
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+    $stmt->execute();
+    return $stmt->fetch();
+    $stmt = null;
+  }
+
+  /* --------------- End of MOSTRAMOS INFORMACION PARA CONTACTO --------------- */
+
+  /* -------------------------------------------------------------------------- */
   /*                       MOSTRAR INFORMACION DEL FOOTER                       */
   /* -------------------------------------------------------------------------- */
 

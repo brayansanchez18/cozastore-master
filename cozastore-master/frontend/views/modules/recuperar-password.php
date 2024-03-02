@@ -13,7 +13,9 @@
                 <input type="email" id="passEmail" name="passEmail" class="form-control form-control-lg passEmail" required />
                 <label class="form-label" for="typeEmailX-2">Correo Electronico</label>
               </div>
-              <?php $password = new ControladorUsuario();
+              <?php $contactenos = ControladorPlantilla::ctrMostrarContacto();
+              $correo = $contactenos['correo'];
+              $password = new ControladorUsuario();
               $password->ctrOlvidoPassword($correo); ?>
               <button class="btn btn-lg btn-block" type="submit" style="background-color: #6c7ae0; color:#fff;">
                 Recuperar

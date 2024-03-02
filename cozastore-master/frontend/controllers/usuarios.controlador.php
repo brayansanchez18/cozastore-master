@@ -301,12 +301,16 @@ class ControladorUsuario
         $valor1 = $_POST['passEmail'];
         $respuesta1 = ModeloUsuario::mdlMostrarUsuario($tabla, $item1, $valor1);
 
+        // var_dump($respuesta1);
+
         if ($respuesta1) {
 
           $id = $respuesta1['id'];
           $item2 = 'password';
           $valor2 = $encriptar;
           $respuesta2 = ModeloUsuario::mdlActualizarUsuario($tabla, $id, $item2, $valor2);
+
+          // var_dump($respuesta2);
 
           if ($respuesta2  == 'ok') {
 
@@ -322,7 +326,7 @@ class ControladorUsuario
             $mail->setFrom($correo, '');
             $mail->addReplyTo($correo, '');
             $mail->Subject = "Por favor verifique su dirección de correo electrónico";
-            $mail->addAddress($_POST["regEmail"]);
+            $mail->addAddress($_POST["passEmail"]);
             $mail->msgHTML('<div style="width:100%; background:#eee; position:relative; font-family:sans-serif; padding-bottom:40px">
                 <center>
                   <img style="padding:20px; width:10%" src="http://tutorialesatualcance.com/tienda/logo.png">
@@ -345,6 +349,7 @@ class ControladorUsuario
               </div>');
 
             $envio = $mail->Send();
+            // var_dump($envio);
 
             if (!$envio) {
 
@@ -377,7 +382,7 @@ class ControladorUsuario
                   })
                   .then((isConfirm) => {
                     if (isConfirm) {
-                        window.location.href = "' . $url . '"login
+                      window.location.href = "' . $url . 'login"
                     }
                   });
 
