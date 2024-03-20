@@ -8,6 +8,14 @@ class ModeloPlantilla
   /*                TRAEMOS LOS ESTILOS DINAMICOS DE LA PLANTILLA               */
   /* -------------------------------------------------------------------------- */
 
+  static public function mdlEstiloPlantilla($tabla)
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+    $stmt->execute();
+    return $stmt->fetch();
+    $stmt = null;
+  }
+
   /* -------------- TRAEMOS LOS ESTILOS DINAMICOS DE LA PLANTILLA ------------- */
 
   /* -------------------------------------------------------------------------- */

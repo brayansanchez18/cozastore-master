@@ -2,7 +2,8 @@
 $frontend = Ruta::ctrRuta();
 $backend = Ruta::ctrRutaServidor();
 $comercio = ControladorPlantilla::ctrMostrarDivisa();
-$divisa = $comercio['divisa']; ?>
+$divisa = $comercio['divisa'];
+$plantilla = ControladorPlantilla::ctrEstiloPlantilla(); ?>
 <?php
 
 /* -------------------------------------------------------------------------- */
@@ -194,6 +195,15 @@ if (!is_array($cabeceras)) {
 
 	<input type="hidden" value="<?= $frontend ?>" id="rutaOculta">
 
+	<!--========================================
+	=            SCRIPT DE FACEBOOK            =
+	=========================================-->
+
+	<?php echo $plantilla['apiFacebook']; ?>
+
+	<!--====  End of SCRIPT DE FACEBOOK  ====-->
+
+
 	<!--===============================================================================================-->
 	<script src="<?= $frontend ?>views/vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
@@ -297,6 +307,8 @@ if (!is_array($cabeceras)) {
 	<script src="<?= $frontend ?>views/js/plantilla.js"></script>
 	<script src="<?= $frontend ?>views/js/buscador.js"></script>
 	<script src="<?= $frontend ?>views/js/usuarios.js"></script>
+	<script src="<?= $frontend ?>views/js/registroFacebook.js"></script>
+
 </body>
 
 </html>

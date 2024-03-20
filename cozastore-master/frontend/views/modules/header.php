@@ -88,6 +88,16 @@ if (isset($_SESSION['validarSesion'])) {
                   Salir
                 </a>
               <?php endif ?>
+
+              <?php if ($_SESSION['modo'] == 'facebook') : ?>
+                <a href="<?= $frontend ?>perfil" class="flex-c-m trans-04 p-lr-25 text-capitalize">
+                  <?= $_SESSION['nombre'] ?>
+                </a>
+
+                <a href="<?= $frontend ?>salir" class="flex-c-m trans-04 p-lr-25">
+                  Salir
+                </a>
+              <?php endif ?>
             <?php endif ?>
           <?php else : ?>
             <a href="<?= $frontend ?>login" class="flex-c-m trans-04 p-lr-25">

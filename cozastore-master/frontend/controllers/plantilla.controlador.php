@@ -16,7 +16,14 @@ class ControladorPlantilla
   /* -------------------------------------------------------------------------- */
   /*                TRAEMOS LOS ESTILOS DINAMICOS DE LA PLANTILLA               */
   /* -------------------------------------------------------------------------- */
-  //TODO: TRAEMOS LOS ESTILOS DINAMICOS DE LA PLANTILLA
+
+  static public function ctrEstiloPlantilla()
+  {
+    $tabla = 'plantilla';
+    $respuesta = ModeloPlantilla::mdlEstiloPlantilla($tabla);
+    return $respuesta;
+  }
+
   /* -------------- TRAEMOS LOS ESTILOS DINAMICOS DE LA PLANTILLA ------------- */
 
   /* -------------------------------------------------------------------------- */

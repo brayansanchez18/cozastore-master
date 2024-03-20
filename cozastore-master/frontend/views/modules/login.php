@@ -27,7 +27,7 @@
             <hr class="my-4">
 
             <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" type="submit">Registrarse con <i class="fa fa-google me-2"></i></button>
-            <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" type="submit">Registrarse con <i class="fa fa-facebook me-2"></i></button>
+            <!-- <button class="btn btn-lg btn-block btn-primary mb-2 facebook" style="background-color: #3b5998;" type="button">Registrarse con <i class="fa fa-facebook me-2"></i></button> -->
 
             <hr>
             Aun no tienes una cuenta? <a href="<?= $frontend ?>register">Registrate</a><br>
